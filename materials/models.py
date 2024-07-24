@@ -27,6 +27,9 @@ class Lesson(models.Model):
         verbose_name='видео'
     )
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         verbose_name = 'Урок'
         verbose_name_plural = 'Уроки'
@@ -55,6 +58,9 @@ class Course(models.Model):
         blank=True,
         null=True
     )
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name = 'Курс'
